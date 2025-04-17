@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh; /* ページ全体を画面サイズに合わせる */
+    display: flex; /* フレックスボックスで中央揃え */
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+}
+
+.background img{
+    width: auto; /* 横幅は自動調整 */
+    height: 100vh; /* 画面の高さに合わせる */
+    object-fit: cover; /* 画像を切り取ってでも画面にフィットさせる */
+    display: block;
+}
