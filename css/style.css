@@ -1,16 +1,105 @@
+@font-face {
+    font-family: 'uzura'; /* フォント名を指定 */
+    src: url('../font/uzura.ttf') format('truetype'); /* フォントファイルのパスを指定 */
+    font-weight: normal; /* フォントの太さを指定 */
+    font-style: normal; /* フォントのスタイルを指定 */
+}
+
+@font-face {
+    font-family: 'KaiseiTokumin'; /* フォント名を指定 */
+    src: url('../font/KaiseiTokumin-Medium.woff2') format('truetype'); /* フォントファイルのパスを指定 */
+    font-weight: normal; /* フォントの太さを指定 */
+    font-style: normal; /* フォントのスタイルを指定 */
+}
+
 body {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh; /* ページ全体を画面サイズに合わせる */
-    display: flex; /* フレックスボックスで中央揃え */
-    justify-content: center; /* 水平方向に中央揃え */
-    align-items: center; /* 垂直方向に中央揃え */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../image/emu.png'); /* 背景画像を指定 */
+    background-size: auto 100vh; /* 高さを画面にフィットさせ、横幅は自動調整 */
+    background-position: center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像を繰り返さない */
+    background-attachment: fixed; /* 背景を固定 */
 }
 
-.background img{
-    width: auto; /* 横幅は自動調整 */
-    height: 100vh; /* 画面の高さに合わせる */
-    object-fit: cover; /* 画像を切り取ってでも画面にフィットさせる */
-    display: block;
+.fit-width {
+    width: 100vw;
+    display: flex;
+}
+
+.fit-height {
+    height: 100vh;
+    display: flex;
+}
+
+.bg-white {
+    background-color: rgba(240, 220, 255, 0.6); /* 白色の背景を指定 */
+}
+
+.flex-container {
+    display: flex; /* フレックスボックスを使う */
+    justify-content: center; /* 子要素を横方向に中央揃え */
+    align-items: center; /* 子要素を縦方向に中央揃え */
+}
+
+.title {
+    font-size: 30px; /* デフォルトのフォントサイズ */
+    font-family: "KaiseiTokumin", 'Noto Sans JP', sans-serif;
+    text-align: center; /* テキストを中央揃え */
+    color: #ffffff; /* 文字色を白に設定 */
+    /* -webkit-text-stroke: 1px #000000; */
+    /* text-stroke: 5px #000000; */
+    /* paint-order: stroke; */
+    text-shadow: 0 0 8px #ff44ff;
+
+    white-space: nowrap; /* 改行を防ぐ */
+    margin: 0; /* 余白をリセット */
+    position: absolute; /* 絶対配置にする */
+    top: 50%; /* 上から50%の位置 */
+    left: 50%; /* 左から50%の位置 */
+    transform: translate(-50%, -50%); /* 完全に中央に揃える */
+
+    /* 画面幅が512px以上の場合 */
+    @media (min-width: 512px) {
+        font-size: 45px;
+    }
+
+    /* 画面幅が768px以上の場合 */
+    @media (min-width: 768px) {
+        font-size: 60px;
+    }
+}
+
+.contents-container {
+    padding-top: 200px;
+}
+
+.contents-box {
+    width: 50px; /* 各要素の幅を設定 */
+    height: 50px; /* 各要素の高さを設定 */
+    margin: 4px; /* 各要素の間隔を設定 */
+    border-radius: 6px; /* 丸くする */
+    background-color: #343A40; /* 背景色を設定 */
+    text-align: center; /* テキストを中央揃え */
+    line-height: 50px; /* テキストを縦方向に中央揃え */
+    font-size: 24px; /* フォントサイズを設定 */
+    font-family: "uzura", 'Noto Sans JP', sans-serif;
+    color: #ffffff; /* テキストの色を白に設定 */
+
+    /* 画面幅が768px以上の場合 */
+    @media (min-width: 768px) {
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+        font-size: 30px;
+    }
+}
+.tmp {
+    height: 100vh;
+    margin: 10vw;
+    background-color: #000000aa;
 }
