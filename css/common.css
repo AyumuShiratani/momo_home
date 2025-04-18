@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'uzura'; /* フォント名を指定 */
+    src: url('../font/uzura.ttf') format('truetype'); /* フォントファイルのパスを指定 */
+    font-weight: normal; /* フォントの太さを指定 */
+    font-style: normal; /* フォントのスタイルを指定 */
+}
+
+@font-face {
+    font-family: 'KaiseiTokumin'; /* フォント名を指定 */
+    src: url('../font/KaiseiTokumin-Medium.woff2') format('truetype'); /* フォントファイルのパスを指定 */
+    font-weight: normal; /* フォントの太さを指定 */
+    font-style: normal; /* フォントのスタイルを指定 */
+}
