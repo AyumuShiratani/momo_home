@@ -4,12 +4,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 
-    background-image: url('../image/emu.png'); /* 背景画像を指定 */
-    background-size: auto 100vh; /* 高さを画面にフィットさせ、横幅は自動調整 */
-    background-position: center; /* 画像を中央に配置 */
-    background-repeat: no-repeat; /* 画像を繰り返さない */
-    background-attachment: fixed; /* 背景を固定 */
+    background-image: url('../assets/images/emu.png');
+    /* 背景画像を指定 */
+    background-size: cover;
+    /* 高さを画面にフィットさせ、横幅は自動調整 */
+    background-position: center;
+    /* 画像を中央に配置 */
+    background-repeat: no-repeat;
+    /* 画像を繰り返さない */
+    background-attachment: fixed;
+    /* 背景を固定 */
 }
 
 .fit-width {
@@ -24,31 +30,44 @@ body {
 
 .bg-white {
     /* background-color: rgba(240, 220, 255, 0.6); 白色の背景を指定 */
-    background-color: rgba(255, 255, 255, 0.6); /* 白色の背景を指定 */
+    background-color: rgba(255, 255, 255, 0.6);
+    /* 白色の背景を指定 */
 }
 
 .flex-container {
-    display: flex; /* フレックスボックスを使う */
-    justify-content: center; /* 子要素を横方向に中央揃え */
-    align-items: center; /* 子要素を縦方向に中央揃え */
+    display: flex;
+    /* フレックスボックスを使う */
+    justify-content: center;
+    /* 子要素を横方向に中央揃え */
+    align-items: center;
+    /* 子要素を縦方向に中央揃え */
 }
 
 .title {
-    font-size: 30px; /* デフォルトのフォントサイズ */
+    font-size: 30px;
+    /* デフォルトのフォントサイズ */
     font-family: "KaiseiTokumin", 'Noto Sans JP', sans-serif;
-    text-align: center; /* テキストを中央揃え */
-    color: #ffffff; /* 文字色を白に設定 */
+    text-align: center;
+    /* テキストを中央揃え */
+    color: #ffffff;
+    /* 文字色を白に設定 */
     /* -webkit-text-stroke: 1px #000000; */
     /* text-stroke: 5px #000000; */
     /* paint-order: stroke; */
     text-shadow: 0 0 8px #ff44ff;
 
-    width: 100vw; /* 幅を100%に設定 */
-    margin: 0; /* 余白をリセット */
-    position: absolute; /* 絶対配置にする */
-    top: 50%; /* 上から50%の位置 */
-    left: 50%; /* 左から50%の位置 */
-    transform: translate(-50%, -50%); /* 完全に中央に揃える */
+    width: 100vw;
+    /* 幅を100%に設定 */
+    margin: 0;
+    /* 余白をリセット */
+    position: absolute;
+    /* 絶対配置にする */
+    top: 50%;
+    /* 上から50%の位置 */
+    left: 50%;
+    /* 左から50%の位置 */
+    transform: translate(-50%, -50%);
+    /* 完全に中央に揃える */
 
     /* 画面幅が512px以上の場合 */
     @media (min-width: 512px) {
@@ -66,16 +85,25 @@ body {
 }
 
 .contents-box {
-    width: 50px; /* 各要素の幅を設定 */
-    height: 50px; /* 各要素の高さを設定 */
-    margin: 4px; /* 各要素の間隔を設定 */
-    border-radius: 6px; /* 丸くする */
-    background-color: #343A40; /* 背景色を設定 */
-    text-align: center; /* テキストを中央揃え */
-    line-height: 50px; /* テキストを縦方向に中央揃え */
-    font-size: 24px; /* フォントサイズを設定 */
+    width: 50px;
+    /* 各要素の幅を設定 */
+    height: 50px;
+    /* 各要素の高さを設定 */
+    margin: 4px;
+    /* 各要素の間隔を設定 */
+    border-radius: 6px;
+    /* 丸くする */
+    background-color: #343A40;
+    /* 背景色を設定 */
+    text-align: center;
+    /* テキストを中央揃え */
+    line-height: 50px;
+    /* テキストを縦方向に中央揃え */
+    font-size: 24px;
+    /* フォントサイズを設定 */
     font-family: "uzura", 'Noto Sans JP', sans-serif;
-    color: #ffffff; /* テキストの色を白に設定 */
+    color: #ffffff;
+    /* テキストの色を白に設定 */
 
     /* 画面幅が768px以上の場合 */
     @media (min-width: 768px) {
@@ -85,8 +113,80 @@ body {
         font-size: 30px;
     }
 }
+
 .tmp {
     height: 100vh;
     margin: 10vw;
     background-color: #000000aa;
+}
+
+.menu {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 36px;
+    height: 36px;
+    /* background-color: white;
+    border-radius: 50%; */
+    /* box-shadow: 0 0 20px rgba(black, 0.2); */
+    transition: transform 250ms ease;
+    cursor: pointer;
+    z-index: 200;
+    user-select: none;
+
+    span {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #444;
+        float: left;
+        transform-origin: center center;
+        transition: transform 250ms ease;
+        z-index: 200;
+
+        &:nth-of-type(1) {
+            transform: translateY(-7px);
+        }
+
+        &:nth-of-type(3) {
+            transform: translateY(7px);
+        }
+    }
+}
+
+#menu {
+    display: none;
+
+    &:checked~.menu {
+        background-color: transparent;
+        transform: rotate(360deg);
+        transition: transform 250ms ease;
+
+        span {
+            background-color: #444;
+            transition: transform 250ms ease;
+
+            &:nth-of-type(1) {
+                transform: translateY(1px) rotate(45deg);
+            }
+
+            &:nth-of-type(2) {
+                display: none;
+            }
+
+            &:nth-of-type(3) {
+                transform: translateY(-1px) rotate(-45deg);
+            }
+        }
+    }
+
+    &:checked~.nav {
+        left: 0px;
+        transition: left 500ms ease;
+    }
 }
