@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+
+    background-image: url('../assets/images/emu.png');
+    /* 背景画像を指定 */
+    background-size: cover;
+    /* 高さを画面にフィットさせ、横幅は自動調整 */
+    background-position: center;
+    /* 画像を中央に配置 */
+    background-repeat: no-repeat;
+    /* 画像を繰り返さない */
+    background-attachment: fixed;
+    /* 背景を固定 */
+}
+
+.fit-width {
+    width: 100vw; /* ビューポートの幅全体を占める */
+}
+
+.fit-height {
+    height: 100vh; /* ビューポートの高さ全体を占める */
+}
+
+.vertical-stack {
+    display: flex;
+    flex-direction: column; /* 子要素を縦方向に並べる */
+}
+
+.center-horizontal:not(.vertical-stack) {
+    display: flex;
+    justify-content: center; /* 子要素を水平方向に中央揃え */
+}
+
+.center-vertical:not(.vertical-stack) {
+    display: flex;
+    align-items: center; /* 子要素を垂直方向に中央揃え */
+}
+
+.vertical-stack.center-horizontal {
+    align-items: center; /* 子要素を水平方向に中央揃え */
+}
+
+.vertical-stack.center-vertical {
+    justify-content: center; /* 子要素を垂直方向に中央揃え */
+}
+
+.text_uzura24 {
+    font-size: 24px;
+    font-family: "uzura", 'Noto Sans JP', sans-serif;
+}
+
+.bg-white {
+    /* background-color: rgba(240, 220, 255, 0.6); 白色の背景を指定 */
+    background-color: rgba(255, 255, 255, 0.6);
+    /* 白色の背景を指定 */
+}
+
+.bg-gray {
+    /* background-color: rgba(240, 220, 255, 0.6); 白色の背景を指定 */
+    background-color: rgba(240, 220, 255, 0.9);
+    /* 白色の背景を指定 */
+}
+
+.title {
+    font-size: 30px;
+    /* デフォルトのフォントサイズ */
+    font-family: "KaiseiTokumin", 'Noto Sans JP', sans-serif;
+    text-align: center;
+    /* テキストを中央揃え */
+    color: #ffffff;
+    /* 文字色を白に設定 */
+    /* -webkit-text-stroke: 1px #000000; */
+    /* text-stroke: 5px #000000; */
+    /* paint-order: stroke; */
+    text-shadow: 0 0 8px #ff44ff;
+
+    /* width: 100vw; */
+    /* 幅を100%に設定 */
+    margin: 0;
+    /* 余白をリセット */
+    /* position: absolute; */
+    /* 絶対配置にする */
+    /* top: 50%; */
+    /* 上から50%の位置 */
+    /* left: 50%; */
+    /* 左から50%の位置 */
+    /* transform: translate(-50%, -50%); */
+    /* 完全に中央に揃える */
+
+    /* 画面幅が512px以上の場合 */
+    @media (min-width: 512px) {
+        font-size: 45px;
+    }
+
+    /* 画面幅が768px以上の場合 */
+    @media (min-width: 768px) {
+        font-size: 60px;
+    }
+}
+
+.contents-container {
+    padding-top: 200px;
+}
+
+.title-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.condition-container {
+    padding-top: 40px;
+}
+
+.contents-box {
+    width: 50px;
+    /* 各要素の幅を設定 */
+    height: 50px;
+    /* 各要素の高さを設定 */
+    margin: 4px;
+    /* 各要素の間隔を設定 */
+    border-radius: 6px;
+    /* 丸くする */
+    background-color: #343A40;
+    /* 背景色を設定 */
+    text-align: center;
+    /* テキストを中央揃え */
+    line-height: 50px;
+    /* テキストを縦方向に中央揃え */
+    font-size: 24px;
+    /* フォントサイズを設定 */
+    font-family: "uzura", 'Noto Sans JP', sans-serif;
+    color: #ffffff;
+    /* テキストの色を白に設定 */
+
+    /* 画面幅が768px以上の場合 */
+    @media (min-width: 768px) {
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+        font-size: 30px;
+    }
+}
+
+.input-box {
+    width: 46px;
+    height: 46px;
+    padding: 0px;
+    border: 2px solid #343A40;
+    margin: 4px; /* 各要素の間隔を設定 */
+    border-radius: 6px; /* 丸くする */
+    background-color: #ffffff; /* 背景色を設定 */
+    text-align: center; /* テキストを中央揃え */
+    line-height: 46px; /* テキストを縦方向に中央揃え */
+    font-size: 24px; /* フォントサイズを設定 */
+    font-family: "KaiseiTokumin", 'Noto Sans JP', sans-serif;
+    color: #343A40; /* テキストの色を設定 */
+}
+
+.target-input{
+    width: 92px;
+}
+
+.result-calc {
+    width: 900px;
+    /* 各要素の幅を設定 */
+    height: 48px;
+    /* 各要素の高さを設定 */
+    padding: 0px;
+    border-bottom: 2px solid #343A40;
+    margin: 4px 0px;
+    /* 各要素の間隔を設定 */
+    background-color: #ffffff;
+    /* 背景色を設定 */
+    text-align: center;
+    /* テキストを中央揃え */
+    line-height: 50px;
+    /* テキストを縦方向に中央揃え */
+    font-size: 24px;
+    /* フォントサイズを設定 */
+    font-family: "KaiseiTokumin", 'Noto Sans JP', sans-serif;
+    color: #343A40;
+    /* テキストの色を白に設定 */
+}

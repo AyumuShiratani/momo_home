@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>すももももももももの家🍑:めいくてん</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/make10.css">
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <!-- タイトル -->
+        <div class="title-container center-horizontal">
+            <div class="contents-box">め</div>
+            <div class="contents-box">い</div>
+            <div class="contents-box">く</div>
+            <div class="contents-box">て</div>
+            <div class="contents-box">ん</div>
+        </div>
+        <div class="bg-white fit-width">
+            <!-- 桁数 -->
+            <div class="center-horizontal">
+                <div class="text_uzura24 center-vertical">桁数</div>
+                <input type="number" class="digit-input input-box" min="0" max="9" maxlength="1" value="4" oninput="this.value=this.value.slice(0,1)" >
+            </div>
+            <!-- 目標値 -->
+            <div class="center-horizontal">
+                <div class="text_uzura24 center-vertical">目標値</div>
+                <input type="number" id="target-input" class="target-input input-box" min="0" max="9" value="10">
+            </div>
+            <!-- 並べ替え -->
+            <div class="center-horizontal">
+                <div class="text_uzura24 center-vertical">並べ替え</div>
+                <label>
+                    <input type="radio" name="sort-option" value="あり" checked> あり
+                </label>
+                <label>
+                    <input type="radio" name="sort-option" value="なし"> なし
+                </label>
+            </div>
+            <!-- 数字入力欄 -->
+            <div class="center-horizontal">
+                <div class="num-input‐container"></div>
+                <input type="button" id="solve-button" class="contents-box" value="解く">
+            </div>
+            <!-- 結果表示 -->
+            <div class="center-horizontal">
+                <div id="result" class="result-calc"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- テンプレート -->
+    <template id="num-input-template">
+        <input type="number" class="num-input input-box" min="0" max="9" maxlength="1" oninput="this.value=this.value.slice(0,1)">
+    </template>
+
+    <script src="../js/make10.js"></script>
+</body>
