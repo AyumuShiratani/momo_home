@@ -80,11 +80,16 @@ body {
     }
 }
 
-.contents-container {
-    padding-top: 200px;
+.characters-container {
+    padding-bottom: 64px;
+
+    /* 画面幅が768px以上の場合 */
+    @media (min-width: 768px) {
+        padding-bottom: 112px;
+    }
 }
 
-.contents-box {
+.characters-box {
     width: 50px;
     /* 各要素の幅を設定 */
     height: 50px;
@@ -114,79 +119,12 @@ body {
     }
 }
 
-.tmp {
+.contents-container {
     height: 100vh;
-    margin: 10vw;
-    background-color: #000000aa;
-}
+    padding-bottom: 80px;
 
-.menu {
-    position: fixed;
-    top: 12px;
-    right: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 36px;
-    height: 36px;
-    /* background-color: white;
-    border-radius: 50%; */
-    /* box-shadow: 0 0 20px rgba(black, 0.2); */
-    transition: transform 250ms ease;
-    cursor: pointer;
-    z-index: 200;
-    user-select: none;
-
-    span {
-        position: relative;
-        display: block;
-        width: 100%;
-        height: 4px;
-        background-color: #444;
-        float: left;
-        transform-origin: center center;
-        transition: transform 250ms ease;
-        z-index: 200;
-
-        &:nth-of-type(1) {
-            transform: translateY(-7px);
-        }
-
-        &:nth-of-type(3) {
-            transform: translateY(7px);
-        }
-    }
-}
-
-#menu {
-    display: none;
-
-    &:checked~.menu {
-        background-color: transparent;
-        transform: rotate(360deg);
-        transition: transform 250ms ease;
-
-        span {
-            background-color: #444;
-            transition: transform 250ms ease;
-
-            &:nth-of-type(1) {
-                transform: translateY(1px) rotate(45deg);
-            }
-
-            &:nth-of-type(2) {
-                display: none;
-            }
-
-            &:nth-of-type(3) {
-                transform: translateY(-1px) rotate(-45deg);
-            }
-        }
-    }
-
-    &:checked~.nav {
-        left: 0px;
-        transition: left 500ms ease;
+    /* 画面幅が768px以上の場合 */
+    @media (min-width: 768px) {
+        padding-bottom: 240px;
     }
 }
